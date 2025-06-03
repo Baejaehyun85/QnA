@@ -20,6 +20,10 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -35,6 +39,11 @@ header h1 {
     margin-bottom: 30px;
 }
 
+.question-form h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -43,15 +52,23 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #34495e;
 }
 
 input[type="text"],
 textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
 }
 
 textarea {
@@ -62,7 +79,7 @@ textarea {
 button {
     background-color: #3498db;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -81,9 +98,14 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.questions-list h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
 .question-item {
     border-bottom: 1px solid #eee;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 .question-item:last-child {
@@ -99,6 +121,14 @@ button:hover {
 .question-subject {
     color: #666;
     font-size: 0.9em;
+    background-color: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.question-date {
+    color: #888;
+    font-size: 0.85em;
 }
 
 .question-title {
@@ -110,7 +140,8 @@ button:hover {
 
 .question-content {
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .answers {
@@ -120,8 +151,41 @@ button:hover {
 }
 
 .answer-item {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
     border-radius: 4px;
+}
+
+.answer-content {
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.answer-date {
+    color: #888;
+    font-size: 0.85em;
+}
+
+.answer-form {
+    margin-top: 20px;
+}
+
+.answer-form textarea {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .answers {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
 }
